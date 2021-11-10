@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import "./banner.css";
 import thor from "../../../Videos/1268729919001_5537394095001_5537388317001.mp4";
+import "./banner.css";
 
 const Banner = () => {
   return (

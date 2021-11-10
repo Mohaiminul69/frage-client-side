@@ -78,5 +78,13 @@
     "price": "126",
     "description": "As it was envisioned by designers, The One is a fragrance for an exceptional woman who instantly draws attention, not only with her looks, but also with her manners, pose and inner world.",
     "img": "https://i.ibb.co/R0K253h/agv-NKKKvynr-RQSSu.jpg"
+  },
+  {
+    "name": "JULES",
+    "type": "perfume",
+    "madeFor": "men",
+    "price": "116",
+    "description": "A strong men’s fragrance composed with woody green notes and spicy pepper accents.",
+    "img": "https://i.ibb.co/bzT3X6x/Y0061201-F006124109-E01-ZHC.jpg"
   }
 ]
