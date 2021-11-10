@@ -1,0 +1,82 @@
+[
+  {
+    "name": "BOSS The Scent Private Accord",
+    "type": "perfume",
+    "madeFor": "men",
+    "price": "65",
+    "description": "The unmistakable qualities of BOSS The Scent are reworked into another form, courtesy of additional elements to captivate the senses with sophisticated mocha and magnetic cocoa absolute.",
+    "img": "https://i.ibb.co/SwTWrss/BOSS-The-Scent-Private-Accord-For-Him.jpg"
+  },
+  {
+    "name": "HUGO Deep Red Perfume",
+    "type": "perfume",
+    "madeFor": "women",
+    "price": "42",
+    "description": "A 50ml bottle of HUGO Deep Red eau de parfum. HUGO Deep Red is for women who revel in the night. They feel free to express their passion and sensuality. Explore the darker side of HUGO and add this warm, intoxicating scent to your collection.",
+    "img": "https://i.ibb.co/zVLD3MP/hbeu58000195-999-200.jpg"
+  },
+  {
+    "name": "EAU SAUVAGE",
+    "type": "perfume",
+    "madeFor": "men",
+    "price": "142",
+    "description": "François Demachy revisits the trail of Eau Sauvage in its Parfum interpretation with a refreshed aromatic power. As powerful and sensual as ever.",
+    "img": "https://i.ibb.co/NSKdcHm/Y0896220-F089624009-E01-ZHC.jpg"
+  },
+  {
+    "name": "Gucci Mémoire d'une Odeur",
+    "type": "perfume",
+    "madeFor": "women",
+    "price": "120",
+    "description": "Perfume is that thing that even with your eyes closed, brings you to a precise moment in space and time” Alessandro Michele. Presenting a universal scent: Gucci Mémoire d’une Odeur, a fragrance that transcends gender and explores the power of memory.",
+    "img": "https://i.ibb.co/HVYYN6n/gucci-perfume.png"
+  },
+  {
+    "name": "DIOR HOMME INTENSE",
+    "type": "perfume",
+    "madeFor": "men",
+    "price": "112",
+    "description": "Dior Homme is worn the way you wear an elegantly sharp, modern suit. Dior Homme Intense Eau de Parfum reveals the extreme grandeur and sophistication of a generous and powerful eau de parfum.",
+    "img": "https://i.ibb.co/gZMP0Fb/dior-men.png"
+  },
+  {
+    "name": "Gucci Bloom Ambrosia di Fiori",
+    "type": "perfume",
+    "madeFor": "women",
+    "price": "145",
+    "description": "Presenting Ambrosia di Fiori, a new chapter of the Gucci Bloom story conceived by Alessandro Michele and created by master perfumer Alberto Morillas. Invoking a banquet of an ancient world.",
+    "img": "https://i.ibb.co/3RsBQNx/gucci-perfume2.png"
+  },
+  {
+    "name": "HIGHER ENERGY",
+    "type": "perfume",
+    "madeFor": "men",
+    "price": "69",
+    "description": "A young, urban fragrance created for the man who is always open to new perspectives and horizons, composed around a harmony of fresh, woody and spicy notes of grapefruit, pepper and vetiver. Luminous and vibrant.",
+    "img": "https://i.ibb.co/F6k5KKm/Y0996346-E03-GHC.jpg"
+  },
+  {
+    "name": "POISON GIRL",
+    "type": "perfume",
+    "madeFor": "women",
+    "price": "76",
+    "description": "I am not a girl, I am Poison. Poison Girl is the fragrance of a modern-day girl, free and sexy. A delectable olfactory lure that instantly poisons and draws out the pleasure to the point of addiction.",
+    "img": "https://i.ibb.co/3N1w4dW/Y0763220-F076322009-E01-ZHC.jpg"
+  },
+  {
+    "name": "FOREVER AND EVER DIOR",
+    "type": "perfume",
+    "madeFor": "women",
+    "price": "146",
+    "description": "Freesia and Jasmine petals blended with Bulgarian Rose make Forever and Ever Dior a tender and delicate fragrance.",
+    "img": "https://i.ibb.co/3SFLFhC/Y0030726-F003074609-E01-ZHC.jpg"
+  },
+  {
+    "name": "The One Dolce&Gabbana",
+    "type": "perfume",
+    "madeFor": "women",
+    "price": "126",
+    "description": "As it was envisioned by designers, The One is a fragrance for an exceptional woman who instantly draws attention, not only with her looks, but also with her manners, pose and inner world.",
+    "img": "https://i.ibb.co/R0K253h/agv-NKKKvynr-RQSSu.jpg"
+  }
+]
