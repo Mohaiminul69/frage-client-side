@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./banner.css";
+import thor from "../../../Videos/1268729919001_5537394095001_5537388317001.mp4";
 
 const Banner = () => {
   return (
@@ -16,14 +17,19 @@ const Banner = () => {
         <Carousel.Item className="sliderItem">
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/YcfjNvX/attractive-seductive-sensual-stylish-woman-holding-perfume.jpg"
+            src="https://i.ibb.co/sFZq4n6/peakpx.jpg"
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item className="sliderItem">
+          <video autoPlay loop muted>
+            <source src={thor} type="video/mp4" />
+          </video>
+        </Carousel.Item>
+        <Carousel.Item className="sliderItem">
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/sFZq4n6/peakpx.jpg"
+            src="https://i.ibb.co/YcfjNvX/attractive-seductive-sensual-stylish-woman-holding-perfume.jpg"
             alt="Third slide"
           />
         </Carousel.Item>

@@ -13,3 +13,9 @@ input {
 .customBtn:hover {
   background: rgb(51, 51, 51) !important;
 }
+.btn-red {
+  background: #dc3545 !important;
+}
+a {
+  text-decoration: none !important;
+}

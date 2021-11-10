@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import { Button, Container, Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
+import Button from "@mui/material/Button";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "./../../../Hooks/useAuth";
 import "./navigation.css";
@@ -46,7 +47,11 @@ const Navigation = () => {
 <----------------- Showing Logout Button If the user is logged in ----------------->
  */}
             {user?.email ? (
-              <Button className="ms-3" onClick={logout} variant="danger">
+              <Button
+                className="customBtn btn-red ms-3"
+                onClick={logout}
+                variant="contained"
+              >
                 Logout
               </Button>
             ) : (
