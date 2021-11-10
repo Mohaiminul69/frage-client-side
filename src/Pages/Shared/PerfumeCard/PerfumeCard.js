@@ -3,7 +3,7 @@ import React from "react";
 import "./perfumeCard.css";
 
 const PerfumeCard = ({ perfume }) => {
-  const { name, img, description, price } = perfume;
+  const { name, img, price } = perfume;
   return (
     <div className="perfumeCard mb-3">
       <img src={img} alt="" />

@@ -23,7 +23,11 @@ const HomeCollection = () => {
     );
   }
   return (
-    <Container className="homeCollection my-4">
+    <Container className="homeCollection my-5">
+      <h1 className="diplay-4 fw-light text-uppercase text-center mb-3">
+        Fragnance Best Seller
+      </h1>
+      <div className="customHorizontalLine mb-5"></div>
       <Row>
         <Col sm={12} md={6}>
           <Row>
