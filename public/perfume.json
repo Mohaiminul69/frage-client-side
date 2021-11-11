@@ -5,7 +5,7 @@
     "madeFor": "men",
     "price": "65",
     "description": "The unmistakable qualities of BOSS The Scent are reworked into another form, courtesy of additional elements to captivate the senses with sophisticated mocha and magnetic cocoa absolute.",
-    "img": "https://i.ibb.co/SwTWrss/BOSS-The-Scent-Private-Accord-For-Him.jpg"
+    "img": "https://i.ibb.co/HGFpKKF/boss-1.png"
   },
   {
     "name": "HUGO Deep Red Perfume",
@@ -13,7 +13,7 @@
     "madeFor": "women",
     "price": "42",
     "description": "A 50ml bottle of HUGO Deep Red eau de parfum. HUGO Deep Red is for women who revel in the night. They feel free to express their passion and sensuality. Explore the darker side of HUGO and add this warm, intoxicating scent to your collection.",
-    "img": "https://i.ibb.co/zVLD3MP/hbeu58000195-999-200.jpg"
+    "img": "https://i.ibb.co/nCPN09J/hugo-1.png"
   },
   {
     "name": "EAU SAUVAGE",
@@ -29,7 +29,7 @@
     "madeFor": "women",
     "price": "120",
     "description": "Perfume is that thing that even with your eyes closed, brings you to a precise moment in space and time” Alessandro Michele. Presenting a universal scent: Gucci Mémoire d’une Odeur, a fragrance that transcends gender and explores the power of memory.",
-    "img": "https://i.ibb.co/HVYYN6n/gucci-perfume.png"
+    "img": "https://i.ibb.co/FhXr5SH/gucci-perfume.png"
   },
   {
     "name": "DIOR HOMME",
@@ -45,7 +45,7 @@
     "madeFor": "women",
     "price": "145",
     "description": "Presenting Ambrosia di Fiori, a new chapter of the Gucci Bloom story conceived by Alessandro Michele and created by master perfumer Alberto Morillas. Invoking a banquet of an ancient world.",
-    "img": "https://i.ibb.co/3RsBQNx/gucci-perfume2.png"
+    "img": "https://i.ibb.co/vhy003S/gucci-perfume2.png"
   },
   {
     "name": "HIGHER ENERGY",
@@ -77,7 +77,7 @@
     "madeFor": "women",
     "price": "126",
     "description": "As it was envisioned by designers, The One is a fragrance for an exceptional woman who instantly draws attention, not only with her looks, but also with her manners, pose and inner world.",
-    "img": "https://i.ibb.co/R0K253h/agv-NKKKvynr-RQSSu.jpg"
+    "img": "https://i.ibb.co/rvtHKyd/dolce-gabbana-the-one.png"
   },
   {
     "name": "JULES",
@@ -86,5 +86,13 @@
     "price": "116",
     "description": "A strong men’s fragrance composed with woody green notes and spicy pepper accents.",
     "img": "https://i.ibb.co/bzT3X6x/Y0061201-F006124109-E01-ZHC.jpg"
+  },
+  {
+    "name": "VELVET DESERT-OUD",
+    "type": "perfume",
+    "madeFor": "men",
+    "price": "166",
+    "description": "The mystical conquest of the desert. The hidden treasures of the Middle East, the convoys and essences dispersed by burners.",
+    "img": "https://i.ibb.co/dW08WrS/DG-Desert-Oud.png"
   }
 ]

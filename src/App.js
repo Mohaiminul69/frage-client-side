@@ -7,6 +7,7 @@ import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Explore from "./Pages/Explore/Explore";
 import NotFound from "./Pages/NotFound/NotFound";
+import PerfumePerchase from "./Pages/Shared/PerfumePurchase/PerfumePerchase";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <PrivateRoute path="/explore">
               <Explore />
+            </PrivateRoute>
+            <PrivateRoute path="/purchase/:perfumeId">
+              <PerfumePerchase />
             </PrivateRoute>
             <Route path="*">
               <NotFound />

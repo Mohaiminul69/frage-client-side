@@ -17,7 +17,11 @@ const HomeCollection = () => {
   }, []);
   if (loading) {
     return (
-      <Container className="text-center">
+      <Container className="homeCollection my-5 text-center">
+        <h1 className="diplay-4 fw-light text-uppercase text-center mb-3">
+          Fragnance Best Seller
+        </h1>
+        <div className="customHorizontalLine mb-5"></div>
         <CircularProgress />
       </Container>
     );

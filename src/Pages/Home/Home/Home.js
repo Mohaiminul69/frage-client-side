@@ -7,7 +7,7 @@ import Footer from "./../../Shared/Footer/Footer";
 const Home = () => {
   return (
     <div>
-      <Navigation />
+      <Navigation render={true} />
       <Banner />
       <HomeCollection />
       <Footer />

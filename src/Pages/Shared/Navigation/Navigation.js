@@ -1,23 +1,31 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Container, Navbar } from "react-bootstrap";
 import Button from "@mui/material/Button";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "./../../../Hooks/useAuth";
 import "./navigation.css";
 
-const Navigation = () => {
-  const { user, logout } = useAuth();
-  const nav = document.querySelector(".customNav");
-  if (nav) {
-    document.addEventListener("scroll", () => {
-      var scrollPos = window.scrollY;
-      if (scrollPos > 70) {
-        nav.style.background = "rgba(27, 27, 27, 0.95)";
-      } else {
-        nav.style.background = "transparent";
+const Navigation = ({ render }) => {
+  useEffect(() => {
+    const nav = document.querySelector(".customNav");
+    if (render) {
+      nav.style.background = "transparent";
+      if (nav) {
+        document.addEventListener("scroll", () => {
+          var scrollPos = window.scrollY;
+          if (scrollPos > 70) {
+            nav.style.background = "rgba(27, 27, 27, 0.95)";
+          } else {
+            nav.style.background = "transparent";
+          }
+        });
       }
-    });
-  }
+    } else {
+      nav.style.background = "rgba(27, 27, 27, 0.95)";
+    }
+  }, [render]);
+
+  const { user, logout } = useAuth();
   return (
     <Fragment>
       <Navbar

@@ -1,16 +1,20 @@
 .bgExplore {
-  background: url("https://i.ibb.co/cgLrjVk/top-view-blue-ribbon-man-perfume.jpg")
+  /* background: url("https://i.ibb.co/cgLrjVk/top-view-blue-ribbon-man-perfume.jpg")
+    no-repeat center center/cover; */
+  background: #152d35;
+  background: url("https://i.ibb.co/SwTWrss/BOSS-The-Scent-Private-Accord-For-Him.jpg")
     no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   position: relative;
   z-index: 1;
   color: white;
+  color: black;
+  background: white;
 }
-.bgExplore::after {
+/* .bgExplore::after {
   transition: 0.5s;
   position: absolute;
   content: "";
@@ -20,4 +24,4 @@
   height: 100%;
   z-index: -1;
   background: rgba(0, 0, 0, 0.86);
-}
+} */

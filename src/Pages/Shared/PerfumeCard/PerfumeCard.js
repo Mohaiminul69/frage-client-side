@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button";
 import React from "react";
+import { Link } from "react-router-dom";
 import "./perfumeCard.css";
 
 const PerfumeCard = ({ perfume }) => {
-  const { name, img, price } = perfume;
+  const { name, img, price, _id } = perfume;
   return (
     <div className="perfumeCard mb-3">
       <img src={img} alt="" />
@@ -12,9 +13,11 @@ const PerfumeCard = ({ perfume }) => {
         <p>
           Price: <span className="text-warning fs-5">${price}</span>
         </p>
-        <Button className="customBtn" variant="contained">
-          Purchase
-        </Button>
+        <Link to={`/purchase/${_id}`}>
+          <Button className="customBtn" variant="contained">
+            Purchase
+          </Button>
+        </Link>
       </div>
     </div>
   );

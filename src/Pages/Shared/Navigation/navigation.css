@@ -1,9 +1,9 @@
 .logo {
   width: 140px;
 }
-/* .customNav {
-  background: rgba(27, 27, 27, 9);
-} */
+.customNav {
+  transition: 0.3s all;
+}
 .navLink {
   color: white !important;
   text-decoration: none;
