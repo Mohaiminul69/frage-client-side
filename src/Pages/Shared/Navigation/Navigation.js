@@ -53,15 +53,20 @@ const Navigation = ({ render }) => {
             </NavLink>
             {/* 
 <----------------- Showing Logout Button If the user is logged in ----------------->
- */}
+*/}
             {user?.email ? (
-              <Button
-                className="customBtn btn-red ms-3"
-                onClick={logout}
-                variant="contained"
-              >
-                Logout
-              </Button>
+              <Fragment>
+                <NavLink className="navLink" to="/myOrders">
+                  MyOrders
+                </NavLink>
+                <Button
+                  className="customBtn btn-red ms-3"
+                  onClick={logout}
+                  variant="contained"
+                >
+                  Logout
+                </Button>
+              </Fragment>
             ) : (
               <Fragment>
                 <NavLink className="navLink" to="/register">

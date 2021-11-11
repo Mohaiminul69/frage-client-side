@@ -39,12 +39,12 @@ const HomeCollection = () => {
               <PerfumeCard perfume={perfumes[2]} />
             </Col>
             <Col sm={12} md={6}>
-              <PerfumeCard perfume={perfumes[4]} />
+              <PerfumeCard perfume={perfumes[6]} />
             </Col>
           </Row>
           <Row>
             <Col sm={12}>
-              <PerfumeCard perfume={perfumes[6]} />
+              <PerfumeCard perfume={perfumes[4]} />
             </Col>
           </Row>
         </Col>

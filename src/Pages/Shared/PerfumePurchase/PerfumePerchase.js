@@ -9,8 +9,14 @@ import useAuth from "./../../../Hooks/useAuth";
 import { useParams } from "react-router";
 import PerfumeDetails from "../PerfumeDetails/PerfumeDetails";
 import "./perfumePurchase.css";
+import AlertModal from "../AlertModal/AlertModal";
 
 const PerfumePerchase = () => {
+  const [alertText, setAlertText] = useState("");
+  const [AlertOpen, setAlertOpen] = useState(false);
+  const handleAlertModalOpen = () => setAlertOpen(true);
+  const handleAlertModalClose = () => setAlertOpen(false);
+
   const { perfumeId } = useParams();
   const [perfume, setPerfume] = useState({});
   const [loading, setLoading] = useState(true);
@@ -23,7 +29,7 @@ const PerfumePerchase = () => {
         setPerfume(data);
         setLoading(false);
       });
-  }, []);
+  }, [perfumeId]);
 
   const {
     register,
@@ -33,8 +39,22 @@ const PerfumePerchase = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    // reset();
+    const orderData = { ...perfume, ...data };
+    delete orderData._id;
+    orderData.status = false;
+    fetch("https://frozen-refuge-23457.herokuapp.com/order", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(orderData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          setAlertText("Order Confirmed");
+          handleAlertModalOpen();
+          reset();
+        }
+      });
   };
 
   if (loading) {
@@ -60,7 +80,7 @@ const PerfumePerchase = () => {
       <div className="bgpefumePurchase py-5">
         <Container className="my-5 container py-5">
           <h1 className="diplay-4 fw-light text-uppercase text-center mb-3">
-            Order details
+            Place Order
           </h1>
           <div className="customHorizontalLine mb-5"></div>
           <Row>
@@ -76,8 +96,8 @@ const PerfumePerchase = () => {
                   Please fill up the form to place order
                 </h6>
                 <input
-                  {...register("name")}
-                  placeholder="Name"
+                  {...register("customerName")}
+                  placeholder="Your Name"
                   className="form-control mb-3"
                   defaultValue={user?.displayName}
                 />
@@ -124,6 +144,11 @@ const PerfumePerchase = () => {
         </Container>
       </div>
       <Footer />
+      <AlertModal
+        AlertOpen={AlertOpen}
+        alertText={alertText}
+        handleAlertModalClose={handleAlertModalClose}
+      />
     </Fragment>
   );
 };

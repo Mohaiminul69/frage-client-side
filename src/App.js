@@ -8,6 +8,7 @@ import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Explore from "./Pages/Explore/Explore";
 import NotFound from "./Pages/NotFound/NotFound";
 import PerfumePerchase from "./Pages/Shared/PerfumePurchase/PerfumePerchase";
+import MyOrders from "./Pages/MyOrders/MyOrders";
 
 function App() {
   return (
@@ -27,11 +28,14 @@ function App() {
             <Route path="/register">
               <Register />
             </Route>
-            <PrivateRoute path="/explore">
+            <Route path="/explore">
               <Explore />
-            </PrivateRoute>
+            </Route>
             <PrivateRoute path="/purchase/:perfumeId">
               <PerfumePerchase />
+            </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+              <MyOrders />
             </PrivateRoute>
             <Route path="*">
               <NotFound />
