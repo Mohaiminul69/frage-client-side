@@ -56,6 +56,9 @@ const Navigation = ({ render }) => {
 */}
             {user?.email ? (
               <Fragment>
+                <NavLink className="navLink" to="/dashboard">
+                  Dashboard
+                </NavLink>
                 <NavLink className="navLink" to="/myOrders">
                   MyOrders
                 </NavLink>

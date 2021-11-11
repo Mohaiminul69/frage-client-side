@@ -9,6 +9,7 @@ import Explore from "./Pages/Explore/Explore";
 import NotFound from "./Pages/NotFound/NotFound";
 import PerfumePerchase from "./Pages/Shared/PerfumePurchase/PerfumePerchase";
 import MyOrders from "./Pages/MyOrders/MyOrders";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             <Route path="/explore">
               <Explore />
             </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
             <PrivateRoute path="/purchase/:perfumeId">
               <PerfumePerchase />
             </PrivateRoute>

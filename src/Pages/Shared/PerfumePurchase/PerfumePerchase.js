@@ -133,7 +133,7 @@ const PerfumePerchase = () => {
                 {errors.exampleRequired && <span>This field is required</span>}
                 <Button
                   type="submit"
-                  className="customBtn bg-success"
+                  className="customBtn btn-green"
                   variant="contained"
                 >
                   Order Now
