@@ -24,6 +24,8 @@ import AdminRoute from "../Login/AdminRoute/AdminRoute";
 import MyOrders from "../MyOrders/MyOrders";
 import "./dashboard.css";
 import ManageProducts from "./ManageProducts/ManageProducts";
+import ManageOrders from "./ManageOrders/ManageOrders";
+import UserReview from "./UserReview/UserReview";
 
 const drawerWidth = 240;
 
@@ -76,6 +78,14 @@ function Dashboard(props) {
                 <ListItemText primary="Manage Products" />
               </ListItem>
             </Link>
+            <Link to={`${url}/manageOrders`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <i className="fas fa-trash-alt"></i>
+                </ListItemIcon>
+                <ListItemText primary="Manage Orders" />
+              </ListItem>
+            </Link>
           </React.Fragment>
         )}
         <Link to={`${url}/myOrders`}>
@@ -84,6 +94,14 @@ function Dashboard(props) {
               <i className="fas fa-boxes"></i>
             </ListItemIcon>
             <ListItemText primary="My Orders" />
+          </ListItem>
+        </Link>
+        <Link to={`${url}/review`}>
+          <ListItem button>
+            <ListItemIcon>
+              <i className="fas fa-boxes"></i>
+            </ListItemIcon>
+            <ListItemText primary="Review" />
           </ListItem>
         </Link>
       </List>
@@ -181,6 +199,9 @@ function Dashboard(props) {
           <Route exact path={path}>
             <Home />
           </Route>
+          <Route path={`${path}/review`}>
+            <UserReview />
+          </Route>
           <Route path={`${path}/myOrders`}>
             <MyOrders />
           </Route>
@@ -192,6 +213,9 @@ function Dashboard(props) {
           </AdminRoute>
           <AdminRoute path={`${path}/manageProducts`}>
             <ManageProducts />
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageOrders`}>
+            <ManageOrders />
           </AdminRoute>
         </Switch>
       </Box>

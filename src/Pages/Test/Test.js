@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
@@ -6,23 +7,10 @@ import Navigation from "../Shared/Navigation/Navigation";
 const Test = () => {
   return (
     <div>
-      <div class="container">
-        <div class="row">
-          <div class="section-header text-center text-capitalize">
-            <h3>portfolio</h3>
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-          <ul class="filter align-items-center">
-            <li data-filter="*">all</li>
-            <li data-filter=".web-design">web design</li>
-            <li data-filter=".graphics-design">graphics design</li>
-            <li data-filter=".brand">brand</li>
-          </ul>
-        </div>
-        <div class="row">
+      <Container>
+        <Row>
           <div class="portfolio-container full-width">
-            <div class="portfolio-item col-md-3 web-design">
+            <Col md={3} class="portfolio-item  web-design">
               <div class="item-content text-center">
                 <img
                   className="img-fluid"
@@ -38,8 +26,8 @@ const Test = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio-item col-md-3 brand">
+            </Col>
+            <Col md={3} class="portfolio-item  web-design">
               <div class="item-content text-center">
                 <img
                   className="img-fluid"
@@ -55,8 +43,8 @@ const Test = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio-item col-md-6 brand">
+            </Col>
+            <Col md={6} class="portfolio-item  brand">
               <div class="item-content text-center">
                 <img
                   className="img-fluid"
@@ -72,8 +60,8 @@ const Test = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio-item col-md-6 web-design">
+            </Col>
+            <Col md={6} class="portfolio-item  brand">
               <div class="item-content text-center">
                 <img
                   className="img-fluid"
@@ -89,8 +77,8 @@ const Test = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio-item col-md-3 graphics-design">
+            </Col>
+            <Col md={3} class="portfolio-item  web-design">
               <div class="item-content text-center">
                 <img
                   className="img-fluid"
@@ -106,8 +94,8 @@ const Test = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio-item col-md-3 web-design">
+            </Col>
+            <Col md={3} class="portfolio-item  web-design">
               <div class="item-content text-center">
                 <img
                   className="img-fluid"
@@ -123,10 +111,11 @@ const Test = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Col>
           </div>
-        </div>
-      </div>
+        </Row>
+      </Container>
+
       <Footer />
     </div>
   );

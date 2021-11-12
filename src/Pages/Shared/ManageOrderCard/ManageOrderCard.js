@@ -20,12 +20,12 @@ const ManageOrderCard = ({ perfume, sendOrderIdToModal }) => {
             {status === false ? (
               <span className="text-warning">Pending</span>
             ) : (
-              <span className="text-success">Approved</span>
+              <span className="text-success">Shipped</span>
             )}
           </p>
           {/* <p className="text-muted">{description.slice(0, 17)}...</p> */}
           <div className="d-flex justify-content-between">
-            <Link to={`/purchase/${_id}`}>
+            <Link to={`/orderDetails/${_id}`}>
               <Button className="bg-dark" variant="contained">
                 view details
               </Button>
