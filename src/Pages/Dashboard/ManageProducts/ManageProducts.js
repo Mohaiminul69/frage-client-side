@@ -1,12 +1,14 @@
 import { CircularProgress } from "@mui/material";
 import React, { Fragment, useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
-import ConfirmModal from "../Shared/ConfirmModal/ConfirmModal";
-import ManageOrderCard from "../Shared/ManageOrderCard/ManageOrderCard";
-import useAuth from "./../../Hooks/useAuth";
-import AlertModal from "./../Shared/AlertModal/AlertModal";
+import { Container, Row, Table } from "react-bootstrap";
+import useAuth from "../../../Hooks/useAuth";
+import AlertModal from "../../Shared/AlertModal/AlertModal";
+import ConfirmModal from "../../Shared/ConfirmModal/ConfirmModal";
+import ManageOrderCard from "../../Shared/ManageOrderCard/ManageOrderCard";
+import Button from "@mui/material/Button";
+import "./manageProduct.css";
 
-const MyOrders = () => {
+const ManageProducts = () => {
   // Alert Modal
   // Alert Modal
   // Alert Modal
@@ -24,13 +26,13 @@ const MyOrders = () => {
   const handleConfirmModalOpen = () => setConfirmModalOpen(true);
 
   const { user } = useAuth();
-  const [orders, setOrders] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`https://frozen-refuge-23457.herokuapp.com/myOrders/${user.email}`)
+    fetch(`https://frozen-refuge-23457.herokuapp.com/allProducts`)
       .then((res) => res.json())
       .then((data) => {
-        setOrders(data);
+        setProducts(data);
         setLoading(false);
       });
   }, [user.email]);
@@ -40,23 +42,23 @@ const MyOrders = () => {
 */
   const handleOrderDelete = (id) => {
     handleConfirmModalClose();
-    fetch(`https://frozen-refuge-23457.herokuapp.com/deleteOrder/${id}`, {
+    fetch(`https://frozen-refuge-23457.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {
-          const remainingOrders = orders.filter((order) => order._id !== id);
-          setOrders(remainingOrders);
-          setAlertText("Order Canceled");
+          const remainingOrders = products.filter((order) => order._id !== id);
+          setProducts(remainingOrders);
+          setAlertText("Perfume Deleted");
           handleAlertModalOpen();
         }
       });
   };
 
   const sendOrderIdToModal = (id) => {
-    setConfirmModalText("cancel order");
+    setConfirmModalText("delete product");
     setOrderId(id);
     handleConfirmModalOpen();
   };
@@ -67,7 +69,7 @@ const MyOrders = () => {
         <div className="bgExplore py-3">
           <Container className="text-center my-3">
             <h1 className="diplay-4 fw-light text-uppercase text-center mb-3">
-              My Orders
+              Manage Products
             </h1>
             <div className="customHorizontalLine mb-5"></div>
             <CircularProgress />
@@ -81,18 +83,50 @@ const MyOrders = () => {
       <div className="bgExplore py-3">
         <Container className="my-3">
           <h1 className="diplay-4 fw-light text-uppercase text-center mb-3">
-            My Orders
+            Manage Products
           </h1>
           <div className="customHorizontalLine mb-5"></div>
-          <Row>
-            {orders.map((order) => (
+          <Table responsive striped bordered hover>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Product ID</th>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product, index) => (
+                <tr key={product._id}>
+                  <td>{index + 1}</td>
+                  <td>{product._id}</td>
+                  <td>
+                    <img className="tableImg" src={product.img} alt="" />
+                  </td>
+                  <td>{product.name}</td>
+                  <td>
+                    <Button
+                      onClick={() => sendOrderIdToModal(product._id)}
+                      variant="contained"
+                      className="customBtn btn-red"
+                    >
+                      Delete Product
+                    </Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          {/* <Row>
+            {products.map((product) => (
               <ManageOrderCard
                 sendOrderIdToModal={sendOrderIdToModal}
-                key={order._id}
-                perfume={order}
+                key={product._id}
+                perfume={product}
               />
             ))}
-          </Row>
+          </Row> */}
         </Container>
       </div>
       <AlertModal
@@ -111,4 +145,4 @@ const MyOrders = () => {
   );
 };
 
-export default MyOrders;
+export default ManageProducts;

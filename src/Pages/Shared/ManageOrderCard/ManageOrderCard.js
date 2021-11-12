@@ -11,7 +11,7 @@ const ManageOrderCard = ({ perfume, sendOrderIdToModal }) => {
       <div className="manageOrderCard mb-3">
         <img src={img} alt="" />
         <div className="p-3 pt-2 text-left">
-          <h4 className="fw-light">{name}</h4>
+          <h5 className="fw-light">{name}</h5>
           <p>
             Price: <span className="text-warning fs-5">${price}</span>
           </p>

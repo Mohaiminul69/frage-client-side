@@ -6,6 +6,7 @@ const ConfirmModal = ({
   handleOrderDelete,
   confirmModalOpen,
   handleConfirmModalClose,
+  confirmModalText,
   orderId,
 }) => {
   /*
@@ -14,9 +15,9 @@ const ConfirmModal = ({
   return (
     <Modal show={confirmModalOpen} onHide={handleConfirmModalClose} centered>
       <Modal.Header closeButton>
-        <Modal.Title className="text-danger">Cancel Order!!</Modal.Title>
+        <Modal.Title className="text-danger text-capitalize">{`${confirmModalText} !!`}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>Are you sure you want to proceed?</Modal.Body>
+      <Modal.Body>{`Are you sure you want to ${confirmModalText}?`}</Modal.Body>
       <Modal.Footer>
         <Button
           variant="contained"

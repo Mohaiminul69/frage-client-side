@@ -1,3 +1,17 @@
 .dashBoardLinks a {
   color: black !important;
 }
+.dashBoardLinks i {
+  font-size: 20px;
+}
+.fix {
+  display: flex;
+}
+@media (max-width: 765px) {
+  .fix {
+    display: block;
+  }
+}
+.customBox {
+  padding: 0 !important;
+}

@@ -16,12 +16,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
-import "./dashboard.css";
 import Home from "./../Home/Home/Home";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
 import AddProduct from "./AddProduct/AddProduct";
 import useAuth from "./../../Hooks/useAuth";
 import AdminRoute from "../Login/AdminRoute/AdminRoute";
+import MyOrders from "../MyOrders/MyOrders";
+import "./dashboard.css";
+import ManageProducts from "./ManageProducts/ManageProducts";
 
 const drawerWidth = 240;
 
@@ -53,7 +55,7 @@ function Dashboard(props) {
             <Link to={`${url}/makeAdmin`}>
               <ListItem button>
                 <ListItemIcon>
-                  <i className="fas fa-home"></i>
+                  <i className="fas fa-user-cog"></i>
                 </ListItemIcon>
                 <ListItemText primary="Make Admin" />
               </ListItem>
@@ -61,13 +63,29 @@ function Dashboard(props) {
             <Link to={`${url}/addProduct`}>
               <ListItem button>
                 <ListItemIcon>
-                  <i className="fas fa-home"></i>
+                  <i className="fas fa-box"></i>
                 </ListItemIcon>
                 <ListItemText primary="Add Product" />
               </ListItem>
             </Link>
+            <Link to={`${url}/manageProducts`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <i className="fas fa-trash-alt"></i>
+                </ListItemIcon>
+                <ListItemText primary="Manage Products" />
+              </ListItem>
+            </Link>
           </React.Fragment>
         )}
+        <Link to={`${url}/myOrders`}>
+          <ListItem button>
+            <ListItemIcon>
+              <i className="fas fa-boxes"></i>
+            </ListItemIcon>
+            <ListItemText primary="My Orders" />
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
@@ -87,7 +105,7 @@ function Dashboard(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box className="fix">
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -156,17 +174,24 @@ function Dashboard(props) {
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
+        className="customBox"
       >
         <Toolbar />
         <Switch>
           <Route exact path={path}>
             <Home />
           </Route>
+          <Route path={`${path}/myOrders`}>
+            <MyOrders />
+          </Route>
           <AdminRoute path={`${path}/addProduct`}>
             <AddProduct />
           </AdminRoute>
           <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin />
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageProducts`}>
+            <ManageProducts />
           </AdminRoute>
         </Switch>
       </Box>

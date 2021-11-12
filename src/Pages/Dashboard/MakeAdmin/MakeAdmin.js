@@ -27,8 +27,11 @@ const MakeAdmin = () => {
       });
   };
   return (
-    <div>
-      <h1>Admin</h1>
+    <div className="px-4">
+      <h1 className="diplay-4 fw-light text-uppercase text-center mt-5 mb-4">
+        Make Admin
+      </h1>
+      <div className="customHorizontalLine mb-5"></div>
       <form onSubmit={handleSubmit(onSubmit)} className="loginForm">
         <h6 className="display-6 mb-3">Enter Admin Email</h6>
         <input

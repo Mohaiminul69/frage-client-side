@@ -59,9 +59,6 @@ const Navigation = ({ render }) => {
                 <NavLink className="navLink" to="/dashboard">
                   Dashboard
                 </NavLink>
-                <NavLink className="navLink" to="/myOrders">
-                  MyOrders
-                </NavLink>
                 <Button
                   className="customBtn btn-red ms-3"
                   onClick={logout}
