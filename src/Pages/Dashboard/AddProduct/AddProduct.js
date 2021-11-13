@@ -61,10 +61,6 @@ const AddProduct = () => {
                 <option value="men">Men</option>
                 <option value="women">Women</option>
               </select>
-              <select {...register("madeFor")} className="form-control mb-3">
-                <option value="men">Men</option>
-                <option value="women">Women</option>
-              </select>
               <input
                 {...register("price", { required: true })}
                 placeholder="Product Price"
