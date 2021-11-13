@@ -5,8 +5,8 @@ import useAuth from "../../../Hooks/useAuth";
 import { Container } from "react-bootstrap";
 
 const AdminRoute = ({ children, ...rest }) => {
-  const { user, admin, isLoading } = useAuth();
-  if (isLoading && !admin) {
+  const { user, admin } = useAuth();
+  if (!admin) {
     return (
       <Container className="text-center pt-5">
         <CircularProgress />
