@@ -26,6 +26,11 @@ const MyOrders = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  /*
+<---------------------------- Getting order by User Email ---------------------------->
+*/
+
   useEffect(() => {
     fetch(`https://frozen-refuge-23457.herokuapp.com/myOrders/${user.email}`)
       .then((res) => res.json())
