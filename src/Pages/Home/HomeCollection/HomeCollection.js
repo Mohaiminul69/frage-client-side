@@ -7,6 +7,11 @@ import "./homeCollection.css";
 const HomeCollection = () => {
   const [perfumes, setPerfumes] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  /*
+<------------------- Getting all Products data from Database ------------------->
+*/
+
   useEffect(() => {
     fetch("https://frozen-refuge-23457.herokuapp.com/perfumes/all")
       .then((res) => res.json())

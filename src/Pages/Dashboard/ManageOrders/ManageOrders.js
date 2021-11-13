@@ -1,7 +1,6 @@
 import { CircularProgress } from "@mui/material";
 import React, { Fragment, useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
-import useAuth from "../../../Hooks/useAuth";
 import AlertModal from "../../Shared/AlertModal/AlertModal";
 import ConfirmModal from "../../Shared/ConfirmModal/ConfirmModal";
 import Button from "@mui/material/Button";
@@ -23,9 +22,13 @@ const ManageOrders = () => {
   const handleConfirmModalClose = () => setConfirmModalOpen(false);
   const handleConfirmModalOpen = () => setConfirmModalOpen(true);
 
-  const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  /*
+<------------------- Getting all orders from all the users from database ------------------->
+*/
+
   useEffect(() => {
     fetch(`https://frozen-refuge-23457.herokuapp.com/allOrders`)
       .then((res) => res.json())
@@ -36,7 +39,7 @@ const ManageOrders = () => {
   }, [orders]);
 
   /*
-<-------------------- Approving the booking and Changing Status by Updating Database -------------------->
+<-------------------- Approving the Order and Changing Status by Updating Database -------------------->
 */
   const handleApprove = (id) => {
     const update = { status: true };
@@ -56,7 +59,7 @@ const ManageOrders = () => {
   };
 
   /*
-<---------------------------- Canceling Booking and deleteing from database ---------------------------->
+<---------------------------- Canceling Order and deleteing from database ---------------------------->
 */
   const handleOrderDelete = (id) => {
     handleConfirmModalClose();

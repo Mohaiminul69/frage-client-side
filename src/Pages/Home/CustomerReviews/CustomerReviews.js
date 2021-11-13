@@ -2,12 +2,17 @@ import { CircularProgress } from "@mui/material";
 import React, { Fragment, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
-import "./customerReview.css";
 import ReviewCard from "./ReviewCard/ReviewCard";
+import "./customerReview.css";
 
 const CustomerReviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  /*
+<------------------- Getting all the Reviews from Database ------------------->
+*/
+
   useEffect(() => {
     fetch("https://frozen-refuge-23457.herokuapp.com/getReviews")
       .then((res) => res.json())
@@ -93,7 +98,7 @@ const CustomerReviews = () => {
       <Container className="px-5">
         <Slider {...settings}>
           {reviews.map((review) => (
-            <ReviewCard review={review} />
+            <ReviewCard key={review._id} review={review} />
           ))}
         </Slider>
       </Container>

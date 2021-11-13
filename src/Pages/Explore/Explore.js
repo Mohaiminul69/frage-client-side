@@ -11,6 +11,11 @@ const Explore = () => {
   const { exploreCategory } = useParams();
   const [perfumes, setPerfumes] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  /*
+<------------ Getting All the Products or catagorised(men/women) products form database ------------>
+*/
+
   useEffect(() => {
     fetch(
       `https://frozen-refuge-23457.herokuapp.com/perfumes/${exploreCategory}`

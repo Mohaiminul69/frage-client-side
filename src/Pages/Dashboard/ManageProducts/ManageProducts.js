@@ -1,10 +1,10 @@
 import { CircularProgress } from "@mui/material";
 import React, { Fragment, useEffect, useState } from "react";
-import { Container, Row, Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
 import AlertModal from "../../Shared/AlertModal/AlertModal";
 import ConfirmModal from "../../Shared/ConfirmModal/ConfirmModal";
-import ManageOrderCard from "../../Shared/ManageOrderCard/ManageOrderCard";
+// import ManageOrderCard from "../../Shared/ManageOrderCard/ManageOrderCard";
 import Button from "@mui/material/Button";
 import "./manageProduct.css";
 
@@ -28,6 +28,11 @@ const ManageProducts = () => {
   const { user } = useAuth();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  /*
+<------------------- Getting all the orders from the database ------------------->
+*/
+
   useEffect(() => {
     fetch("https://frozen-refuge-23457.herokuapp.com/allProducts")
       .then((res) => res.json())
@@ -38,7 +43,7 @@ const ManageProducts = () => {
   }, [user.email]);
 
   /*
-<---------------------------- Canceling Booking and deleteing from database ---------------------------->
+<---------------------------- Canceling Order and deleteing from database ---------------------------->
 */
   const handleOrderDelete = (id) => {
     handleConfirmModalClose();

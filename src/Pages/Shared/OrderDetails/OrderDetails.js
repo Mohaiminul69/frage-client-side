@@ -3,7 +3,6 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
 import Navigation from "../Navigation/Navigation";
-import Button from "@mui/material/Button";
 import { useParams } from "react-router";
 import PerfumeDetails from "../PerfumeDetails/PerfumeDetails";
 import "./orderDetails.css";
@@ -12,6 +11,10 @@ const OrderDetails = () => {
   const { perfumeId } = useParams();
   const [perfume, setPerfume] = useState({});
   const [loading, setLoading] = useState(true);
+
+  /*
+<------------------ Getting Single Perfume Details from Database ------------------>
+*/
 
   useEffect(() => {
     fetch(`https://frozen-refuge-23457.herokuapp.com/order/${perfumeId}`)

@@ -7,7 +7,7 @@ const ReviewCard = ({ review }) => {
   return (
     <div className="reviewCard">
       <div className="review-div">
-        <i class="fas fa-quote-right"></i>
+        <i className="fas fa-quote-right"></i>
         <q className="text-muted fs-6 text-center mx-3">
           {comment.slice(0, 150)}..
         </q>
@@ -18,7 +18,7 @@ const ReviewCard = ({ review }) => {
           <h6>{name}</h6>
           <Rating
             name="half-rating-read"
-            value={rating}
+            value={parseInt(rating)}
             precision={0.5}
             readOnly
           />
