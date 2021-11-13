@@ -48,7 +48,7 @@ const Navigation = ({ render }) => {
             <NavLink className="navLink" to="/home">
               Home
             </NavLink>
-            <NavLink className="navLink" to="/explore">
+            <NavLink className="navLink" to="/explore/all">
               Explore
             </NavLink>
             {/* 

@@ -19,6 +19,9 @@ input {
 .btn-green {
   background: #198754 !important;
 }
+.btn-grey {
+  background: #000000 !important;
+}
 a {
   text-decoration: none !important;
 }

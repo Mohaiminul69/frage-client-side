@@ -1,22 +1,26 @@
 import { CircularProgress } from "@mui/material";
 import React, { Fragment, useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
+import { useParams } from "react-router";
 import ExplorePerfumeCard from "../Shared/ExplorePerfumeCard/ExplorePerfumeCard";
 import Navigation from "../Shared/Navigation/Navigation";
 import Footer from "./../Shared/Footer/Footer";
 import "./explore.css";
 
 const Explore = () => {
+  const { exploreCategory } = useParams();
   const [perfumes, setPerfumes] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://frozen-refuge-23457.herokuapp.com/perfumes")
+    fetch(
+      `https://frozen-refuge-23457.herokuapp.com/perfumes/${exploreCategory}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setPerfumes(data);
         setLoading(false);
       });
-  }, []);
+  }, [exploreCategory]);
   if (loading) {
     return (
       <Fragment>

@@ -8,7 +8,7 @@ const HomeCollection = () => {
   const [perfumes, setPerfumes] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://frozen-refuge-23457.herokuapp.com/perfumes")
+    fetch("https://frozen-refuge-23457.herokuapp.com/perfumes/all")
       .then((res) => res.json())
       .then((data) => {
         setPerfumes(data);

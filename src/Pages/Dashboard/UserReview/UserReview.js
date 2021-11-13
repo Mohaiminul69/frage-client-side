@@ -74,7 +74,7 @@ const UserReview = () => {
               />
               <input
                 {...register("img", { required: true })}
-                placeholder="Tour/Package Image URL"
+                placeholder="Display Image URL"
                 className="form-control mb-3"
               />
               {errors.exampleRequired && <span>This field is required</span>}

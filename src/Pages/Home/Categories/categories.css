@@ -1,0 +1,40 @@
+.category-div {
+  border: 3px solid black;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 0.25em 0.25em 0.75em rgb(0 0 0 / 55%),
+    0.125em 0.125em 0.25em rgb(0 0 0 / 25%);
+  z-index: 1;
+  position: relative;
+}
+.category-div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+.men {
+  background: url("https://i.ibb.co/syvjtzM/HUGO-BOSS-BTS-STILLS-121016-0737-800x534.jpg")
+    no-repeat center center/cover;
+}
+.men::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+.women {
+  background: url("https://i.ibb.co/sFZq4n6/peakpx.jpg") no-repeat center
+    center/cover;
+}
+.explore-all {
+  background: url("https://i.ibb.co/KqF7kNX/Getty-Images-904676768-d26f2e22a77440aca648115d972e49b8.jpg")
+    no-repeat center center/cover;
+}

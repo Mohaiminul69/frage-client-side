@@ -29,7 +29,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`https://frozen-refuge-23457.herokuapp.com/allProducts`)
+    fetch("https://frozen-refuge-23457.herokuapp.com/allProducts")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
