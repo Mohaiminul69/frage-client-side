@@ -61,7 +61,7 @@ function Dashboard(props) {
                 <ListItemIcon>
                   <i className="fas fa-trash-alt"></i>
                 </ListItemIcon>
-                <ListItemText primary="Manage Orders" />
+                <ListItemText primary="Manage All Orders" />
               </ListItem>
             </Link>
             <Link to={`${url}/addProduct`}>

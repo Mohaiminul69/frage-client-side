@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./explorePerfumeCard.css";
 
 const ExplorePerfumeCard = ({ perfume }) => {
-  const { name, price, img, _id } = perfume;
+  const { name, price, img, _id, description } = perfume;
   return (
     <Col sm={12} md={6} lg={4}>
       <div className="explorePerfumeCard mb-3">
@@ -15,7 +15,7 @@ const ExplorePerfumeCard = ({ perfume }) => {
           <p>
             Price: <span className="text-warning fs-5">${price}</span>
           </p>
-          {/* <p className="text-muted">{description.slice(0, 17)}...</p> */}
+          <p>{description.slice(0, 35)}...</p>
           <Link to={`/purchase/${_id}`}>
             <Button className="customBtn" variant="contained">
               Purchase
