@@ -74,7 +74,7 @@ const AddProduct = () => {
               />
               <input
                 {...register("img", { required: true })}
-                placeholder="Tour/Package Image URL"
+                placeholder="Product Image URL"
                 className="form-control mb-3"
               />
               {errors.exampleRequired && <span>This field is required</span>}
