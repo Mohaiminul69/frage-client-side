@@ -21,7 +21,7 @@ const PerfumeDetails = ({ perfume }) => {
         </p>
         <p className="text-muted">{description}...</p>
         <Button variant="contained" onClick={handleBack} className="customBtn">
-          Back To My Orders
+          Go Back
         </Button>
       </div>
     </div>
