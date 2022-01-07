@@ -5,6 +5,7 @@ import ConfirmModal from "../Shared/ConfirmModal/ConfirmModal";
 import ManageOrderCard from "../Shared/ManageOrderCard/ManageOrderCard";
 import useAuth from "./../../Hooks/useAuth";
 import AlertModal from "./../Shared/AlertModal/AlertModal";
+import { useHistory } from "react-router";
 
 const MyOrders = () => {
   // Alert Modal
@@ -24,6 +25,8 @@ const MyOrders = () => {
   const handleConfirmModalOpen = () => setConfirmModalOpen(true);
 
   const { user } = useAuth();
+  const history = useHistory();
+
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -32,13 +35,21 @@ const MyOrders = () => {
 */
 
   useEffect(() => {
-    fetch(`https://frozen-refuge-23457.herokuapp.com/myOrders/${user.email}`)
-      .then((res) => res.json())
+    fetch(`https://frozen-refuge-23457.herokuapp.com/myOrders/${user.email}`, {
+      headers: { authorization: `Bearer ${localStorage.getItem("idToken")}` },
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json();
+        } else if (res.status === 401) {
+          history.push("/login");
+        }
+      })
       .then((data) => {
         setOrders(data);
         setLoading(false);
       });
-  }, [user.email]);
+  }, [user.email, history]);
 
   /*
 <---------------------------- Canceling Booking and deleteing from database ---------------------------->
